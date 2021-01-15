@@ -1,0 +1,56 @@
+﻿@inject IJSRuntime js
+
+<input type="checkbox" @bind="mostrarBotones" />
+ 
+<ListadoGenerico listado="peliculas">
+    <hayRegistros Context="pelicula">
+        <PeliculaIndividual pelicula="pelicula" indice="peliculas.IndexOf(pelicula)" mostrarBotones="mostrarBotones" eliminarPelicula="eliminar" />
+    </hayRegistros>
+</ListadoGenerico>
+
+<Confirmacion @ref="confirmacion" onConfirm="eliminarPeliculaConfirmacion" onCancel="cancelarEliminacionPelicula">
+       <div>¿Desea eliminar la película?</div>
+</Confirmacion>
+
+
+@code {
+    [Parameter] public List<Pelicula> peliculas { get; set; }
+    //[Parameter] public RenderFragment childContent { get; set; }
+    bool mostrarBotones = true;
+    Confirmacion confirmacion;
+    Pelicula peliculaABorrar;
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    await Task.Delay(3000);
+    //    this.peliculas = ObtenerPeliculas();
+    //}
+
+
+    async Task eliminar(Pelicula pelicula)
+    {
+        //var confirmacion = await js.confirm($"¿Desea borrarla pelicula {pelicula.titulo}?");
+
+        //if (confirmacion == true)
+        //{
+        //    Console.WriteLine("eliminando " + pelicula.titulo);
+        //    peliculas.Remove(pelicula);
+        //}
+        confirmacion.mostrar();
+        peliculaABorrar = pelicula;
+    }
+
+    void eliminarPeliculaConfirmacion()
+    {
+        peliculas.Remove(peliculaABorrar);
+        peliculaABorrar = null;
+        confirmacion.ocultar();
+    }
+
+    void cancelarEliminacionPelicula()
+    {
+        confirmacion.ocultar();
+        peliculaABorrar = null;
+    }
+
+}

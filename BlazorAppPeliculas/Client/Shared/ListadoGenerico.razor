@@ -1,0 +1,46 @@
+﻿@typeparam Titem
+
+@if (listado == null)
+{
+    @*<img src="https://media1.tenor.com/images/b18603537d3dbdd776f2907e3187a5c4/tenor.gif?itemid=11580546" />
+        <text>Cargando...</text>*@
+    @if (cargando == null)
+    {
+        <text>Cargando...</text>
+    }
+    else
+    {
+        @cargando
+    }
+
+
+}
+else if (listado.Count == 0)
+{
+
+
+    @if (noHayRegistros == null)
+    {
+        <text>No hay películas que mostrar</text>
+    }
+    else
+    {
+        @noHayRegistros
+    }
+}
+else
+{
+    foreach (var elemento in listado)
+    {
+        @hayRegistros(elemento)
+    }
+
+
+}
+
+@code {
+    [Parameter] public RenderFragment cargando { get; set; }
+    [Parameter] public RenderFragment noHayRegistros { get; set; }
+    [Parameter] public RenderFragment<Titem> hayRegistros { get; set; }
+    [Parameter] public List<Titem> listado { get; set; }
+}

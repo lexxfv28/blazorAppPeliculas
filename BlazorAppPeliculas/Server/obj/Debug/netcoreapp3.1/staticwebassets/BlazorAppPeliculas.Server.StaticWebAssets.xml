@@ -1,0 +1,6 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Client\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Client\obj\Debug\netstandard2.1\scopedcss\projectbundle\" />
+  <ContentRoot BasePath="/" Path="C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Client\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Server\obj\Debug\netcoreapp3.1\scopedcss\bundle\" />
+</StaticWebAssets>

@@ -1,0 +1,9 @@
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\bin\Debug\netstandard2.1\BlazorAppPeliculas.Shared.deps.json
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\bin\Debug\netstandard2.1\BlazorAppPeliculas.Shared.dll
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\bin\Debug\netstandard2.1\BlazorAppPeliculas.Shared.pdb
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\obj\Debug\netstandard2.1\BlazorAppPeliculas.Shared.AssemblyInfoInputs.cache
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\obj\Debug\netstandard2.1\BlazorAppPeliculas.Shared.AssemblyInfo.cs
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\obj\Debug\netstandard2.1\BlazorAppPeliculas.Shared.csproj.CoreCompileInputs.cache
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\obj\Debug\netstandard2.1\BlazorAppPeliculas.Shared.dll
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\obj\Debug\netstandard2.1\BlazorAppPeliculas.Shared.pdb
+C:\Fuentes_blazor\BlazorAppPeliculas\BlazorAppPeliculas\Shared\obj\Debug\netstandard2.1\BlazorAppPeliculas.Shared.csprojAssemblyReference.cache

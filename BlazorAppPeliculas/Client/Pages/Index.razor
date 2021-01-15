@@ -1,0 +1,61 @@
+﻿@page "/"
+@inject IRepositorio repositorio
+
+
+<p>Hola @UtilidadesString.Enmayuscular(nombre)</p>
+@*@foreach (var pelicula in peliculas)
+{
+    <div>
+        <p>titulo: <b>@pelicula.titulo</b></p>
+        <p>lanzamiento: <b>@pelicula.lanzamiento.tostring("dd-mm-yyyy")</b></p>
+    </div>
+}*@
+
+<p>------</p>
+@*<ListadoPeliculas @ref="listado"  peliculas="peliculas" />*@
+<ListadoPeliculas peliculas="peliculas" />
+
+<p>------</p>
+<div>
+    <h2>Nueva pelicula</h2>
+    <EjemploTextBox @attributes="atributos" />
+</div>
+
+<button @onclick="agregarPelicula">Agregar Película</button>
+
+
+@code{
+    string nombre = "Diego";
+    public List<Pelicula> peliculas;
+
+    //public ListadoPeliculas listado;
+
+    private Dictionary<string, object> atributos = new Dictionary<string, object>()
+    {
+        { "placeholder", "Nueva peli" },
+        { "disabled", "true"}
+    };
+
+    //private List<Pelicula> ObtenerPeliculas()
+    protected override void OnInitialized()
+    {
+        //var lista = listado.peliculas;
+
+
+        peliculas = repositorio.obtenerPeliculas();
+
+
+    }
+
+    //protected override bool ShouldRender()
+    //{
+    //    return true;
+    //}
+
+    private void agregarPelicula()
+    {
+        peliculas.Add(new Pelicula() { titulo = "Otra", lanzamiento = new DateTime() });
+        Console.WriteLine("Agregando peli: " + peliculas.Count);
+    }
+
+}
